@@ -10,13 +10,12 @@ const App = () => {
     setQuery(e.target.value);
   };
 
+  const keys = ['first_name', 'last_name', 'email'];
+
+  // console.log(Users[0]['first_name']);
+
   const search = (data) =>
-    data.filter(
-      (user) =>
-        user.first_name.toLowerCase().includes(query) ||
-        user.last_name.toLowerCase().includes(query) ||
-        user.email.toLowerCase().includes(query)
-    );
+    data.filter((user) => keys.some((key) => user[key].toLowerCase().includes(query)));
 
   return (
     <div className='app'>
