@@ -1,3 +1,5 @@
+import React from 'react';
+
 const Table = ({ data }) => {
   return (
     <table>
@@ -7,11 +9,11 @@ const Table = ({ data }) => {
           <th>Last Name</th>
           <th>Email</th>
         </tr>
-        {data.map((user) => (
-          <tr key={user.id}>
-            <td>{user.first_name}</td>
-            <td>{user.last_name}</td>
-            <td>{user.email}</td>
+        {data.map((item) => (
+          <tr key={item.id}>
+            <td>{item.first_name}</td>
+            <td>{item.last_name}</td>
+            <td>{item.email}</td>
           </tr>
         ))}
       </tbody>
